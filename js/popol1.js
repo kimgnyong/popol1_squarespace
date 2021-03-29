@@ -31,6 +31,7 @@
             var $mobileMenuBtn2 = $('#mobile-modal ul > li > a ').eq(2);
             var $slideWrap1      = $('#mobile-modal .nav-wrap > ul > li > .sub-menu-wrap1');
             var $slideWrap2      = $('#mobile-modal .nav-wrap > ul > li > .sub-menu-wrap2');
+            var paralIf         =0;
             
 
             function resizeFn(){
@@ -75,6 +76,18 @@
                 })
             }
             navSlideFn();
+            $(window).scroll(function(){
+                if( $(window).scrollTop() >= $('#section1').offset().top  ){
+                  if(paralIf==0){
+                    paralIf=1;
+                    $('#skip li a').css({background:'#000'});
+                }
+            }
+            if( $(window).scrollTop() === 0 ){
+                    paralIf=0;
+                    $('#skip li a').css({background:'transparent'});
+                }
+            });
 
 
 
@@ -1254,11 +1267,12 @@
                     }
                 }
             })
+
             // 버튼 클릭마다 카운트가 움직이는 함수
             function countFn(){
                 // nTop   = parseInt($count.css('top'));
                 // console.log(nTop);
-                // console.log($countNumH);
+                console.log($countNumH);
                 $count.stop().animate({top:($countNumH*-cnt)},600,function(){
                     if(cnt>8){cnt=0}
                     if(cnt<0){cnt=8}

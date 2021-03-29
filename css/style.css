@@ -2,8 +2,8 @@
 
 #skip {z-index:2;position:fixed;top:0;left:0;width:100%;}
 #skip li {width:100%;}
-#skip li a {display:block;width:100%;line-height:0;font-size:0;color:#fff;background:#111;text-align:center;}
-#skip li a:focus {line-height:50px;font-size:20px;}
+#skip li a {position:absolute;top:80px;display:block;width:100%;line-height:0px;font-size:0;color:#fff;background:transparent;text-align:center; transition: all .5s;}
+#skip li a:focus {line-height:100px;font-size:30px;}
 
 
 #wrap {width:100%; overflow: hidden;}
@@ -360,7 +360,7 @@
 #wrap #main #section5 .gap .wrap .container .row2 .sect5-wrap .sect5-gap .sect5-section .sect5-section-gap .sect5-bto-wrap .col2 {float:right;}
 #wrap #main #section5 .gap .wrap .container .row2 .sect5-wrap .sect5-gap .sect5-section .sect5-section-gap .sect5-bto-wrap .col2 img {width:26.69469vw;}
 /* 리모콘 */
-#wrap #main #section5 .gap .wrap .container .row2 .limocon {position: absolute; bottom:0;right:0vw;opacity: 0;background: #fff; width:12.29637vw;height:14.71361vw; border-radius: 3%;}
+#wrap #main #section5 .gap .wrap .container .row2 .limocon {position: absolute; bottom:0;right:0vw;opacity: 0;background: #fff; width:12.29637vw;height:14.71361vw; border-radius: 3%; box-shadow: 0.0525486vw 0.0525486vw 0.315291vw 0.315291vw rgba(0,0,0, .2);}
 #wrap #main #section5 .gap .wrap .container .row2 .limocon.add5pallar {animation: set5pallarlim 1s; opacity: 1;right:2.62743vw;}
 @keyframes set5pallarlim {
     0%      {opacity: 0;right:0vw;}
@@ -748,7 +748,7 @@
 #wrap #main #section10 .gap .wrap .container .row2 .slide-container .slide-gap .slide-view .slide-wrap li .pri-gap .text-container .text-wrap > aside {position:relative;font-size: 1.156069vw; line-height: 120%; font-weight: 600; color:#000;opacity: 0;left:-0.525486vw; transition: all .3s;}
 #wrap #main #section10 .gap .wrap .container .row2 .slide-container .slide-gap .slide-view .slide-wrap li .pri-gap:hover .text-container .text-wrap > aside {opacity: 1;left:0;}
 #wrap #main #section10 .gap .wrap .container .row3 {width:auto;height:1.103520vw; padding:0 2.101944vw;margin-top:1.8392012vw;overflow: hidden;}
-#wrap #main #section10 .gap .wrap .container .row3 .count {float:right;position: relative; top:0;margin-top:-3.27056vw;}
+#wrap #main #section10 .gap .wrap .container .row3 .count {float:right;position: relative; top:0;margin-top:-3.31056227vw;}
 /* 
 1, 탑값이 반응형으로 안바뀌어서 resizeFn함수 안에서 탑값의 변동이 없음   해결 : 탑값이 문자열로 들어가있었음 parseInt함수로 정수형으로 반환
 2, 변동되는 count의 top값이 수식의 변수에 포함되어있어서 고정값이어야하는 값이 계속 커지므로 알고리즘이 꼬여있음.     해결 : top값을 margin-top값으로 바꿔서 변수에 포함되지 않는값으로 변경
